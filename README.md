@@ -93,3 +93,6 @@ nodemon index.js
 npm run typescript
 npm run nodemon 
 ```
+
+--- 
+
