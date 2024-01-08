@@ -39,46 +39,50 @@ TypeScript Compiler
 Javascript Interpreter
 Java: Interpreter and Compiler
 */
-// #### #################################################
 // TypeScript Editor
 // TypeScript İlk Program
 // TypeScript Değişkenler
-// TypeScript Veri Tipleri
-// Dynamics data types
-// let data=44;
-// console.log(data);
-// data="kelime";
-// console.log(data);
-// data=true;
-// console.log(data);
-// Data types: number,string,boolean
-// type Safe: 
-// TS datatypes (number)
-var data1 = 44;
-data1 = 99;
-console.log(data1);
-console.log(typeof data1);
-data1 = 99.88;
-console.log(data1);
-console.log(typeof data1);
-// TS datatypes (string)
-var data2 = " ts ÖĞreniyorum ts";
-console.log(data2);
-data2 = data2.trim();
-console.log(data2);
-console.log(typeof data2);
-// TS datatypes (boolean)
-var data3 = 3 > 1;
-console.log(data3);
-console.log(typeof data3);
-// Dynamics data types (any)
-// karşı taraftan(api,database,object) gelen veri türünü bilmiyorum.
-var data4 = true; //44;   //"Malatya";
-console.log(data4);
-data4 = 44;
-console.log(data4);
-data4 = false;
-console.log(data4);
+// #### DATA TYPES #################################################
+var dataTypes = function () {
+    // TypeScript Veri Tipleri
+    // Dynamics data types
+    // let data=44;
+    // console.log(data);
+    // data="kelime";
+    // console.log(data);
+    // data=true;
+    // console.log(data);
+    // Data types: number,string,boolean
+    // type Safe: 
+    // TS datatypes (number)
+    var data1 = 44;
+    data1 = 99;
+    console.log(data1);
+    console.log(typeof data1);
+    data1 = 99.88;
+    console.log(data1);
+    console.log(typeof data1);
+    // TS datatypes (string)
+    var data2 = " ts ÖĞreniyorum ts";
+    console.log(data2);
+    data2 = data2.trim();
+    console.log(data2);
+    console.log(typeof data2);
+    // TS datatypes (boolean)
+    var data3 = 3 > 1;
+    console.log(data3);
+    console.log(typeof data3);
+    // Dynamics data types (any)
+    // karşı taraftan(api,database,object) gelen veri türünü bilmiyorum.
+    var data4 = true; //44;   //"Malatya";
+    console.log(data4);
+    data4 = 44;
+    console.log(data4);
+    data4 = false;
+    console.log(data4);
+};
+dataTypes();
+// #### DATA TYPES #################################################
 // TypeScript Operatörler
 // TypeScript Koşullu İfadeler
 // TypeScript Döngüler

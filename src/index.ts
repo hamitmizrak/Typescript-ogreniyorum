@@ -40,14 +40,12 @@ Javascript Interpreter
 Java: Interpreter and Compiler 
 */
 
-
-// #### #################################################
-
 // TypeScript Editor
 // TypeScript İlk Program
 // TypeScript Değişkenler
 
-
+// #### DATA TYPES #################################################
+let dataTypes=()=>{
 // TypeScript Veri Tipleri
 // Dynamics data types
 // let data=44;
@@ -88,9 +86,10 @@ data4=44;
 console.log(data4);
 data4=false;
 console.log(data4);
+}
+dataTypes()
 
-
-
+// #### DATA TYPES #################################################
 // TypeScript Operatörler
 // TypeScript Koşullu İfadeler
 // TypeScript Döngüler
