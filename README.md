@@ -11,7 +11,8 @@ git commit -m "init git"
 git add remote origin44 URL
 git branch -M main
 git push -u origin44  main
-
+ssh-keygen -t rsa -b 4096 -C "hamitmizrak@gmail.com"
+cat ~/.ssh/id_rsa.pub ==> KOPYALAA GİTHUB SSH YAPIŞTIR.
 ```
 
 ## Npm Codes
@@ -45,6 +46,7 @@ ls -la
 cd .
 cd ..
 mkdir dizin
+cat >> deneme.tx
 ```
 
 
@@ -54,11 +56,11 @@ node -v  => v20.10.0 (Semantic Version)
 npm -v   => 10.2.3   (Semantic Version)
 npm init
 npm init -y
-
+npm install
 ```
 
 ---
-## Nodemon 
+## Nodemon (Nodemon: Node js monitor => Javascript sürekli takip eder)
 ```sh
 npm install -g nodemon --save 
 npm install  nodemon --save-dev
@@ -78,6 +80,12 @@ tsc -w index.ts
 nodemon index.js
 ```
 
+
+---
+## Web Pack
+```sh
+
+```
 
 ---
 ## RUN
