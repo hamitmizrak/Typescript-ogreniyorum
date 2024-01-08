@@ -160,6 +160,14 @@ function tsFunction5(x, y, z) {
 }
 var result5 = tsFunction5("44", 10, "99.12");
 console.log(result5);
+// Bitirme Projesini PDF 
+// tsconfig.json
+// tsc -w index.ts 
+// nodemon 
+// Web pack 
+// live-server
+// Babil
+// Node JS Server- HTML- Document - URL - EXPRESS
 // #### ENUM #################################################
 // TypeScript Enum
 // #### CLASS #################################################
@@ -170,6 +178,8 @@ console.log(result5);
 // TypeScript Generics
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
+// this
+// super
 // #### ABSTRACT #################################################
 // TypeScript Abstract
 // #### INTERFACE #################################################
@@ -178,7 +188,6 @@ console.log(result5);
 // TypeScript Never
 // TypeScript Type Assertion
 // TypeScript Type Aliases
-// TypeScript Array Methods
 // TypeScript Object Methods
 // TypeScript Decorators
 // TypeScript Mixins

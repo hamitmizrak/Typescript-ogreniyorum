@@ -189,6 +189,15 @@ function tsFunction5(x:any,y:number,z:string):number{
 const result5=tsFunction5("44",10,"99.12");
 console.log(result5);
 
+// Bitirme Projesini PDF 
+// tsconfig.json
+// tsc -w index.ts 
+// nodemon 
+// Web pack 
+// live-server
+// Babil
+// Node JS Server- HTML- Document - URL - EXPRESS
+
 
 // #### ENUM #################################################
 // TypeScript Enum
@@ -206,6 +215,8 @@ console.log(result5);
 
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
+// this
+// super
 
 
 // #### ABSTRACT #################################################
@@ -219,7 +230,6 @@ console.log(result5);
 // TypeScript Never
 // TypeScript Type Assertion
 // TypeScript Type Aliases
-// TypeScript Array Methods
 // TypeScript Object Methods
 
 // TypeScript Decorators
