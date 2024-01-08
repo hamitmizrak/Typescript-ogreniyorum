@@ -1,12 +1,13 @@
-// Javascript Nedir ?
 /*
+Javascript Nedir ?
+
 Betik dildir.
 Tarayıcı tarafında çalışır.
 Nodejs ile sunucu tarafında da çalışır.
 OOP (interface,inheritance,abstract)
-*/
-// TypeScript Nedir ?
-/*
+
+TypeScript Nedir ?
+
 TS: Açık kaynak kodlu bir dildir.
 TS: Esnektir.
 TS: Js herşeyi kullanabilirsiniz.
@@ -14,6 +15,7 @@ TS: Microsoft ürünüdür. C# , Hejlberg
 TS: Javascript+...+ diğer özellikleri
 Javascript = TS
 
+ TypeScript Özellikleri Nelerdir ?
 TS: Esnektir
 TS: Static type
 TS: Derleme zamanı
@@ -27,44 +29,56 @@ TS: Javascript ile çalışır.
 TS: Javascript kodlarını derler.
 TS: Javascript'e dönüştürür.
 
-
+TypeScript Neden Öğrenmeliyim ?
+TypeScript Genel Bileşenleri Nelerdir ?
+Ecmascript ile JavaScript Arasındaki Farklar Nelerdir ?
+TypeScript ile JavaScript Arasındaki Farklar Nelerdir ?
+TypeScript ile Ecmascript Arasındaki Farklar Nelerdir ?
+TypeScript Kurulumu
+TypeScript Compiler
+Javascript Interpreter
+Java: Interpreter and Compiler
 */
-// TypeScript Özellikleri Nelerdir ?
-/*
-
-*/
-// TypeScript Neden Öğrenmeliyim ?
-/*
-
-*/
-// TypeScript Genel Bileşenleri Nelerdir ?
-/*
-
-*/
-// Ecmascript ile JavaScript Arasındaki Farklar Nelerdir ?
-/*
-
-*/
-// TypeScript ile JavaScript Arasındaki Farklar Nelerdir ?
-/*
-
-*/
-// TypeScript ile Ecmascript Arasındaki Farklar Nelerdir ? 
-/*
-
-*/
-// TypeScript Kurulumu
-/*
-
-*/
-// TypeScript Compiler
-// Javascript Interpreter
-// Java: Interpreter and Compiler
 // #### #################################################
 // TypeScript Editor
 // TypeScript İlk Program
 // TypeScript Değişkenler
 // TypeScript Veri Tipleri
+// Dynamics data types
+// let data=44;
+// console.log(data);
+// data="kelime";
+// console.log(data);
+// data=true;
+// console.log(data);
+// Data types: number,string,boolean
+// type Safe: 
+// TS datatypes (number)
+var data1 = 44;
+data1 = 99;
+console.log(data1);
+console.log(typeof data1);
+data1 = 99.88;
+console.log(data1);
+console.log(typeof data1);
+// TS datatypes (string)
+var data2 = " ts ÖĞreniyorum ts";
+console.log(data2);
+data2 = data2.trim();
+console.log(data2);
+console.log(typeof data2);
+// TS datatypes (boolean)
+var data3 = 3 > 1;
+console.log(data3);
+console.log(typeof data3);
+// Dynamics data types (any)
+// karşı taraftan(api,database,object) gelen veri türünü bilmiyorum.
+var data4 = true; //44;   //"Malatya";
+console.log(data4);
+data4 = 44;
+console.log(data4);
+data4 = false;
+console.log(data4);
 // TypeScript Operatörler
 // TypeScript Koşullu İfadeler
 // TypeScript Döngüler
