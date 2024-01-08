@@ -44,69 +44,125 @@ Java: Interpreter and Compiler
 // TypeScript İlk Program
 // TypeScript Değişkenler
 
-// #### DATA TYPES #################################################
-let dataTypes=()=>{
-// TypeScript Veri Tipleri
-// Dynamics data types
-// let data=44;
-// console.log(data);
-// data="kelime";
-// console.log(data);
-// data=true;
-// console.log(data);
+// ####  STATIC DATA TYPES #################################################
+function staticDataTypes() {
+    // TypeScript Veri Tipleri
+    // Dynamics data types
+    // let data=44;
+    // console.log(data);
+    // data="kelime";
+    // console.log(data);
+    // data=true;
+    // console.log(data);
 
-// Data types: number,string,boolean
-// type Safe: 
-// TS datatypes (number)
-let data1:number=44;
-data1=99;
-console.log(data1);
-console.log(typeof data1);
-data1=99.88;
-console.log(data1);
-console.log(typeof data1);
+    // Data types: number,string,boolean
+    // type Safe: 
+    // TS datatypes (number)
+    let data1: number = 44;
+    data1 = 99;
+    console.log(data1);
+    console.log(typeof data1);
+    data1 = 99.88;
+    console.log(data1);
+    console.log(typeof data1);
 
-// TS datatypes (string)
-let data2:string=" ts ÖĞreniyorum ts";
-console.log(data2);
-data2=data2.trim();
-console.log(data2);
-console.log(typeof data2);
+    // TS datatypes (string)
+    let data2: string = " ts ÖĞreniyorum ts";
+    console.log(data2);
+    data2 = data2.trim();
+    console.log(data2);
+    console.log(typeof data2);
 
-// TS datatypes (boolean)
-let data3:boolean=3>1;
-console.log(data3);
-console.log(typeof data3);
+    // TS datatypes (boolean)
+    let data3: boolean = 3 > 1;
+    console.log(data3);
+    console.log(typeof data3);
 
-// Dynamics data types (any)
-// karşı taraftan(api,database,object) gelen veri türünü bilmiyorum.
-let data4:any=true;  //44;   //"Malatya";
-console.log(data4);
-data4=44;
-console.log(data4);
-data4=false;
-console.log(data4);
+    // Dikkat: const mutlaka başlangıç değeri vermelisiniz.
+    // 'const' declarations must be initialized.
+    // const data5:number;
+    // console.log(data5);
 }
-dataTypes()
+//staticDataTypes()
 
-// #### DATA TYPES #################################################
+
+// #### DYNAMICS DATA TYPES #################################################
+const dynamicsDataTypes = function () {
+    // Dynamics data types (any)
+    // karşı taraftan(api,database,object) gelen veri türünü bilmiyorum.
+    let data4: any = true;  //44;   //"Malatya";
+    console.log(data4);
+    data4 = 44;
+    console.log(data4);
+    data4 = false;
+    console.log(data4);
+}
+//dynamicsDataTypes ();
+
+// #### OPERATORS #################################################
 // TypeScript Operatörler
+// + - * / % && || ! > >= < <=
+
+
+// #### CONDITION #################################################
 // TypeScript Koşullu İfadeler
+// if else if, ternary
+
+
+// #### LOOP #################################################
 // TypeScript Döngüler
+// for() while() do-while() foreach() for-in() for-of()
+
+// number,string,boolean,any
+// #### ARRAY #################################################
+// TypeScript Döngüler
+let tsArray = () => {
+    // TypeScript Diziler
+    let array: number[] = [1, 2, 9, 5, 3];
+    console.log(array[0]);
+    array[5] = 23;
+    console.log(array[array.length - 1]);
+
+    let array2 :string[]  =["İstanbul","Ankara","Adana"]
+    let array3 :boolean[]  =[3>1, 44<1,true]
+    let array4 :any[]  =[44,"str",true]
+}
+tsArray()
+
+
+
+// #### FUNCTIONS #################################################
 // TypeScript Fonksiyonlar
+// void
+
+
+// #### CLASS #################################################
 // TypeScript Sınıflar
-// TypeScript Arayüzler
-// TypeScript Diziler
-// TypeScript Tuple
+
+// #### ENUM #################################################
 // TypeScript Enum
-// TypeScript Any
-// TypeScript Void
+
+
+// #### GENERICS #################################################
+// TypeScript Generics
+
+// #### INHERITANCE #################################################
+// TypeScript Inheritance
+
+
+// #### ABSTRACT #################################################
+// TypeScript Abstract
+
+// #### INTERFACE #################################################
+// TypeScript Interface
+
+
+// TypeScript Tuple
 // TypeScript Null ve Undefined
 // TypeScript Never
 // TypeScript Type Assertion
 // TypeScript Type Aliases
-// TypeScript String Methods
-// TypeScript Number Methods
+
 // TypeScript Array Methods
 // TypeScript Object Methods
 // TypeScript Tarih Metodları

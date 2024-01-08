@@ -42,8 +42,8 @@ Java: Interpreter and Compiler
 // TypeScript Editor
 // TypeScript İlk Program
 // TypeScript Değişkenler
-// #### DATA TYPES #################################################
-var dataTypes = function () {
+// ####  STATIC DATA TYPES #################################################
+function staticDataTypes() {
     // TypeScript Veri Tipleri
     // Dynamics data types
     // let data=44;
@@ -72,6 +72,14 @@ var dataTypes = function () {
     var data3 = 3 > 1;
     console.log(data3);
     console.log(typeof data3);
+    // Dikkat: const mutlaka başlangıç değeri vermelisiniz.
+    // 'const' declarations must be initialized.
+    // const data5:number;
+    // console.log(data5);
+}
+//staticDataTypes()
+// #### DYNAMICS DATA TYPES #################################################
+var dynamicsDataTypes = function () {
     // Dynamics data types (any)
     // karşı taraftan(api,database,object) gelen veri türünü bilmiyorum.
     var data4 = true; //44;   //"Malatya";
@@ -81,25 +89,50 @@ var dataTypes = function () {
     data4 = false;
     console.log(data4);
 };
-dataTypes();
-// #### DATA TYPES #################################################
+//dynamicsDataTypes ();
+// #### OPERATORS #################################################
 // TypeScript Operatörler
+// + - * / % && || ! > >= < <=
+// #### CONDITION #################################################
 // TypeScript Koşullu İfadeler
+// if else if, ternary
+// #### LOOP #################################################
 // TypeScript Döngüler
+// for() while() do-while() foreach() for-in() for-of()
+// number,string,boolean,any
+// #### ARRAY #################################################
+// TypeScript Döngüler
+var tsArray = function () {
+    // TypeScript Diziler
+    var array = [1, 2, 9, 5, 3];
+    console.log(array[0]);
+    array[5] = 23;
+    console.log(array[array.length - 1]);
+    var array2 = ["İstanbul", "Ankara", "Adana"];
+    var array3 = [3 > 1, 44 < 1, true];
+    var array4 = [44, "str", true];
+};
+tsArray();
+// #### FUNCTIONS #################################################
 // TypeScript Fonksiyonlar
+// void
+// #### CLASS #################################################
 // TypeScript Sınıflar
-// TypeScript Arayüzler
-// TypeScript Diziler
-// TypeScript Tuple
+// #### ENUM #################################################
 // TypeScript Enum
-// TypeScript Any
-// TypeScript Void
+// #### GENERICS #################################################
+// TypeScript Generics
+// #### INHERITANCE #################################################
+// TypeScript Inheritance
+// #### ABSTRACT #################################################
+// TypeScript Abstract
+// #### INTERFACE #################################################
+// TypeScript Interface
+// TypeScript Tuple
 // TypeScript Null ve Undefined
 // TypeScript Never
 // TypeScript Type Assertion
 // TypeScript Type Aliases
-// TypeScript String Methods
-// TypeScript Number Methods
 // TypeScript Array Methods
 // TypeScript Object Methods
 // TypeScript Tarih Metodları
