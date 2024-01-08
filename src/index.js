@@ -105,12 +105,25 @@ var dynamicsDataTypes = function () {
 var tsArray = function () {
     // TypeScript Diziler
     var array = [1, 2, 9, 5, 3];
-    console.log(array[0]);
-    array[5] = 23;
-    console.log(array[array.length - 1]);
-    var array2 = ["İstanbul", "Ankara", "Adana"];
-    var array3 = [3 > 1, 44 < 1, true];
-    var array4 = [44, "str", true];
+    //console.log(array[0]);
+    //array[5] = 23;
+    //console.log(array[array.length - 1]);
+    var array2 = [1, 2, 9, 5, 3];
+    var array3 = ["İstanbul", "Ankara", "Adana"];
+    var array4 = [3 > 1, 44 < 1, true];
+    var array5 = [44, "str", true];
+    // tuple: Veri olarak birden fazla datatypes tek bir bileşende göstermek için kullanıyoruz.
+    var tuple1 = [1, "Adana"];
+    var result = "".concat(tuple1[0], " => ").concat(tuple1[1]);
+    console.log(result);
+    tuple1.push(2, "Adıyaman");
+    tuple1.push(3, "Afyon");
+    tuple1.push(4, "Bolu");
+    tuple1.push(5, "Balıkesir");
+    tuple1.forEach(function (temp) {
+        console.log("".concat(temp));
+    });
+    var tuple2 = [44, "str", true];
 };
 tsArray();
 // #### FUNCTIONS #################################################

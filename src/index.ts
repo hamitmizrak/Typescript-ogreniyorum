@@ -119,16 +119,31 @@ const dynamicsDataTypes = function () {
 let tsArray = () => {
     // TypeScript Diziler
     let array: number[] = [1, 2, 9, 5, 3];
-    console.log(array[0]);
-    array[5] = 23;
-    console.log(array[array.length - 1]);
+    //console.log(array[0]);
+    //array[5] = 23;
+    //console.log(array[array.length - 1]);
 
-    let array2 :string[]  =["İstanbul","Ankara","Adana"]
-    let array3 :boolean[]  =[3>1, 44<1,true]
-    let array4 :any[]  =[44,"str",true]
+    let array2: number[]   = [1, 2, 9, 5, 3];
+    let array3 :string[]   = ["İstanbul","Ankara","Adana"]
+    let array4 :boolean[]  = [3>1, 44<1,true]
+    let array5 :any[]      = [44,"str",true]
+
+    // tuple: Veri olarak birden fazla datatypes tek bir bileşende göstermek için kullanıyoruz.
+    let tuple1 :[number,string]=[1,"Adana"];
+    let result=`${tuple1[0]} => ${tuple1[1]}`
+    console.log(result );
+    tuple1.push(2,"Adıyaman");
+    tuple1.push(3,"Afyon");
+    tuple1.push(4,"Bolu");
+    tuple1.push(5,"Balıkesir");
+    tuple1.forEach((temp)=>{
+        console.log(`${temp}`)
+    });
+
+    let tuple2 :[number,string,boolean]=[44,"str",true];
+
 }
 tsArray()
-
 
 
 // #### FUNCTIONS #################################################
