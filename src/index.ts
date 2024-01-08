@@ -96,6 +96,13 @@ const dynamicsDataTypes = function () {
     console.log(data4);
     data4 = false;
     console.log(data4);
+
+    // unknown
+
+    // any ile unknown arasındaki farklar
+
+    // null 
+    // undefined
 }
 //dynamicsDataTypes ();
 
@@ -135,27 +142,61 @@ let tsArray = () => {
     tuple1.push(2,"Adıyaman");
     tuple1.push(3,"Afyon");
     tuple1.push(4,"Bolu");
-    tuple1.push(5,"Balıkesir");
+    tuple1.push(5,"Amasya");
     tuple1.forEach((temp)=>{
         console.log(`${temp}`)
     });
 
     let tuple2 :[number,string,boolean]=[44,"str",true];
-
 }
-tsArray()
+//tsArray()
 
 
 // #### FUNCTIONS #################################################
 // TypeScript Fonksiyonlar
-// void
+// void: dönüşü olmayan (Yani işlem sonunda bana birşey döndermee)
+function tsFunction(x,y,z){
+    console.log(`Normal: ${x} ${y} ${z}`); 
+}
+tsFunction(4,10,99);
+
+function tsFunction2(x:number,y:number,z:string){
+    console.log(`TS Function2: ${x} ${y} ${z}`); 
+}
+tsFunction2(4,10,"Merhabalar")
+
+
+function tsFunction3(x:any,y:number,z:string){
+    console.log(`TS Function3: ${x} ${y} ${z}`); 
+}
+tsFunction3(44,10,"Merhabalar");
+tsFunction3(true,10,"Merhabalar");
+tsFunction3("Malatya",10,"Merhabalar");
+
+// void: geriye bir şey dönderme
+function tsFunction4(x:any,y:number,z:string):void{
+    console.log(`TS Function4: ${x} ${y} ${z}`); 
+}
+tsFunction4("Malatya",10,"Merhabalar");
+
+function tsFunction5(x:any,y:number,z:string):number{
+    //console.log(`TS Function4: ${x} ${y} ${z}`); 
+    //return 10;
+    //return Number(x)+y+Number(z);
+    return parseInt(x)+y+parseFloat(z);
+}
+const result5=tsFunction5("44",10,"99.12");
+console.log(result5);
+
+
+// #### ENUM #################################################
+// TypeScript Enum
 
 
 // #### CLASS #################################################
 // TypeScript Sınıflar
-
-// #### ENUM #################################################
-// TypeScript Enum
+// OOP 
+// this,super
 
 
 // #### GENERICS #################################################
@@ -164,26 +205,19 @@ tsArray()
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 
-
 // #### ABSTRACT #################################################
 // TypeScript Abstract
 
 // #### INTERFACE #################################################
 // TypeScript Interface
 
-
-// TypeScript Tuple
 // TypeScript Null ve Undefined
 // TypeScript Never
 // TypeScript Type Assertion
 // TypeScript Type Aliases
-
 // TypeScript Array Methods
 // TypeScript Object Methods
-// TypeScript Tarih Metodları
-// TypeScript Math Metodları
-// TypeScript Regular Expressions
-// TypeScript Template Literals
+
 // TypeScript Decorators
 // TypeScript Mixins
 // TypeScript Interfaces vs Types
@@ -192,17 +226,8 @@ tsArray()
 // TypeScript Namespaces vs Modules
 // TypeScript Ambient Namespaces
 // TypeScript Ambient Modules
-// TypeScript Generics
-// TypeScript Generic Constraints
-// TypeScript Generic Classes
-// TypeScript Generic Interfaces
-// TypeScript Generic Functions
-// TypeScript Generic Enums
-// TypeScript Generic Type Aliases
-// TypeScript Generic Utility Types
 // TypeScript Inference
 // TypeScript Type Compatibility
-// TypeScript Advanced Types
 // TypeScript Intersection Types
 
 
