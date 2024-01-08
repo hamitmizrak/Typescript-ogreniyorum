@@ -185,6 +185,7 @@ function tsFunction5(x:any,y:number,z:string):number{
     //return Number(x)+y+Number(z);
     return parseInt(x)+y+parseFloat(z);
 }
+
 const result5=tsFunction5("44",10,"99.12");
 console.log(result5);
 
@@ -202,11 +203,14 @@ console.log(result5);
 // #### GENERICS #################################################
 // TypeScript Generics
 
+
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 
+
 // #### ABSTRACT #################################################
 // TypeScript Abstract
+
 
 // #### INTERFACE #################################################
 // TypeScript Interface
