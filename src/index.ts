@@ -248,10 +248,6 @@ function tsFunction5(x: any, y: number, z: string): number {
 // this,super
 
 
-// #### GENERICS #################################################
-// TypeScript Generics
-
-
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 // this
@@ -260,6 +256,10 @@ function tsFunction5(x: any, y: number, z: string): number {
 
 // #### ABSTRACT #################################################
 // TypeScript Abstract
+
+
+// #### GENERICS #################################################
+// TypeScript Generics
 
 
 // #### INTERFACE #################################################

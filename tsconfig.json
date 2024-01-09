@@ -26,7 +26,7 @@
 
     /* Modüller */
     "module": "commonjs",                                /* Oluşturulan modül kodunu belirtin. */
-    "rootDir": "./src",                                  /* Kaynak dosyalarınızda kök klasörü belirtin. */
+    //"rootDir": "./src",                                  /* Kaynak dosyalarınızda kök klasörü belirtin. */
     // "moduleResolution": "node10",                     /* TypeScript’in belirli bir modül belirticisinden bir dosyayı nasıl arayacağını belirtin. */
     // "baseUrl": "./",                                  /* Göreli olmayan modül adlarını çözümlemek için temel dizini belirtin. */
     // "paths": {},                                      /* İçeri aktarmaları ek arama konumlarına yeniden eşleyen bir girdi kümesi belirtin. */
@@ -44,8 +44,8 @@
     // "noResolve": true,                                /* 'import', 'require' veya '<reference>' ifadelerinin TypeScript'in projeye eklemesi gereken dosya sayısını artırmasına izin verme. */
 
     /* JavaScript Desteği */
-    "allowJs": true,                                  /* JavaScript dosyalarının programınızın bir parçası olmasına izin verin. Bu dosyalardan hata almak için 'checkJS' seçeneğini kullanın. */
-    "checkJs": true,                                  /* Tür denetimli JavaScript dosyalarında hata raporlamayı etkinleştirin. */
+    "allowJs": true,                                     /* JavaScript dosyalarının programınızın bir parçası olmasına izin verin. Bu dosyalardan hata almak için 'checkJS' seçeneğini kullanın. */
+    "checkJs": true,                                     /* Tür denetimli JavaScript dosyalarında hata raporlamayı etkinleştirin. */
     // "maxNodeModuleJsDepth": 1,                        /* 'node_modules' öğesinden JavaScript dosyaları teslim almak için kullanılan maksimum klasör derinliğini belirtin. Yalnızca 'allowJs' ile geçerlidir. */
 
     /* Yayımla */
@@ -68,7 +68,7 @@
     // "newLine": "crlf",                                /* Dosyaları yaymak için yeni satır karakterini ayarlayın. */
     // "stripInternal": true,                            /* JSDoc açıklamalarında '@internal' olan üretme bildirimlerini devre dışı bırak. */
     // "noEmitHelpers": true,                            /* Derlenen çıktıda '__extends' gibi özel yardımcı işlevler oluşturmayı devre dışı bırak. */
-    // "noEmitOnError": true,                            /* Herhangi bir tür denetimi hatası bildirildiyse, dosya yaymayı devre dışı bırakın. */
+   "noEmitOnError": true,                                /* Herhangi bir tür denetimi hatası bildirildiyse, dosya yaymayı devre dışı bırakın. */
     // "preserveConstEnums": true,                       /* Oluşturulan kodda 'const enum' bildirimlerinin silinmesini devre dışı bırak. */
     // "declarationDir": "./",                           /* Oluşturulan bildirim dosyaları için çıkış dizinini belirtin. */
     // "preserveValueImports": true,                     /* JavaScript çıktısında, içeri aktarılmazsa kaldırılacak olan kullanılmayan içe aktarılan değerleri koruyun. */
@@ -90,7 +90,7 @@
     // "strictPropertyInitialization": true,             /* Bildirilen ancak oluşturucuda ayarlanmamış sınıf özelliklerini denetleyin. */
     // "noImplicitThis": true,                           /* 'this' için 'any' türü verildiğinde hata raporlamayı etkinleştir. */
     // "useUnknownInCatchVariables": true,               /* Catch yan tümcesi değişkenlerini varsayılan olarak 'any' yerine 'unknown' olarak kabul et. */
-    // "alwaysStrict": true,                             /* 'use strict' öğesinin her zaman yayıldığından emin olun. */
+       "alwaysStrict": true,                             /* 'use strict' öğesinin her zaman yayıldığından emin olun. */
     // "noUnusedLocals": true,                           /* Yerel değişkenler okunmadığında hata raporlamayı etkinleştir. */
     // "noUnusedParameters": true,                       /* İşlev parametresi okunmadığında hata oluştur. */
     // "exactOptionalPropertyTypes": true,               /* 'undefined' eklemek yerine isteğe bağlı özellik türlerini yazıldıkları gibi yorumlayın. */

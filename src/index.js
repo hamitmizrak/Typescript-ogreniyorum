@@ -201,14 +201,14 @@ function tsFunction5(x, y, z) {
 // TypeScript Sınıflar
 // OOP 
 // this,super
-// #### GENERICS #################################################
-// TypeScript Generics
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 // this
 // super
 // #### ABSTRACT #################################################
 // TypeScript Abstract
+// #### GENERICS #################################################
+// TypeScript Generics
 // #### INTERFACE #################################################
 // TypeScript Interface
 // TypeScript Null ve Undefined
