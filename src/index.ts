@@ -276,25 +276,91 @@ let tsClass = () => {
 
         // FUNCTION
         computerInformation(): void {
-            let result = `Computer Name: ${this._computerName} Computer Ram: ${this._ram} Computer version: ${this._newVersion}`;
+            let result = `Information => Computer Name: ${this._computerName} Computer Ram: ${this._ram} Computer version: ${this._newVersion}`;
             console.log(result);
         } //end function
     } //end Computer
 
     // INSTANCE
-    let computerIntance = new Computer("Msi",8,true);
-    console.log("NAME: "+ computerIntance._computerName);
-    console.log("RAM: "+ computerIntance._ram);
-    console.log("VERSION: "+ computerIntance._newVersion);
-    
+    let computerIntance = new Computer("Msi", 8, true);
+    console.log("NAME: " + computerIntance._computerName);
+    console.log("RAM: " + computerIntance._ram);
+    console.log("VERSION: " + computerIntance._newVersion);
 }
-tsClass()
+//tsClass()
 
 
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 // this
 // super
+const tsInheritance = () => {
+
+    // CLASS
+    class Computer {
+        // FIELD
+        _mainCard: string;
+        _cpu: string;
+        _ram: number;
+        _harddisk:string;
+        _newVersion:boolean;
+
+        // CONSTRUCTOR
+        constructor(mainCard:string, cpu:string, ram:number, harddisk:string, newVersion:boolean){
+            this._mainCard=mainCard;
+            this._cpu=cpu;
+            this._ram=ram;
+            this._harddisk=harddisk;
+            this._newVersion=newVersion;
+
+        }
+
+        // FUNCTION
+        computerInformation():void{
+            let result=`Information => MainCard: ${this._mainCard} Cpu: ${this._cpu} Ram: ${this._ram} Harddisk: ${this._harddisk} NewVersion: ${this._newVersion}`;
+            console.log(result);
+        }
+    } //end class Computer
+
+    // 2.CLASS (MSI)
+    class Msi extends Computer{
+    }
+
+     // 3.CLASS (ASUS)
+     class Asus extends Computer{
+        // Field
+        // Constructor
+        // function
+    }
+
+    // INTANCE (Computer)
+    const computerInstance=new Computer("Computer","i7",8,"1TB",true);
+    console.log("MAIN CARD: "+ computerInstance._mainCard);
+    console.log("CPU: "+computerInstance._cpu);
+    console.log("RAM: "+computerInstance._ram);
+    console.log("HARD DISK: "+computerInstance._harddisk);
+    console.log("Version: "+computerInstance._newVersion);
+    computerInstance.computerInformation();
+    console.log("**********************************************");
+
+    const msiInstance=new Msi("Msi","i9",16,"4TB",true);
+    console.log("MAIN CARD: "+ msiInstance._mainCard);
+    console.log("CPU: "+msiInstance._cpu);
+    console.log("RAM: "+msiInstance._ram);
+    console.log("HARD DISK: "+msiInstance._harddisk);
+    console.log("Version: "+msiInstance._newVersion);
+    msiInstance.computerInformation();
+    console.log("**********************************************");
+
+    const asusInstance=new Asus("Asus","i9",32,"2TB",true);
+    console.log("MAIN CARD: "+ asusInstance._mainCard);
+    console.log("CPU: "+asusInstance._cpu);
+    console.log("RAM: "+asusInstance._ram);
+    console.log("HARD DISK: "+asusInstance._harddisk);
+    console.log("Version: "+asusInstance._newVersion);
+    asusInstance.computerInformation();
+}
+tsInheritance()
 
 
 // #### ABSTRACT #################################################

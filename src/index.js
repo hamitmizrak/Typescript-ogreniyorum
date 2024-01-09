@@ -1,6 +1,21 @@
 "use strict";
 // npm run typescript 
 // npm run nodemon
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 /*
 Javascript Nedir ?
 
@@ -224,7 +239,7 @@ var tsClass = function () {
         }
         // FUNCTION
         Computer.prototype.computerInformation = function () {
-            var result = "Computer Name: ".concat(this._computerName, " Computer Ram: ").concat(this._ram, " Computer version: ").concat(this._newVersion);
+            var result = "Information => Computer Name: ".concat(this._computerName, " Computer Ram: ").concat(this._ram, " Computer version: ").concat(this._newVersion);
             console.log(result);
         }; //end function
         return Computer;
@@ -235,11 +250,71 @@ var tsClass = function () {
     console.log("RAM: " + computerIntance._ram);
     console.log("VERSION: " + computerIntance._newVersion);
 };
-tsClass();
+//tsClass()
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 // this
 // super
+var tsInheritance = function () {
+    // CLASS
+    var Computer = /** @class */ (function () {
+        // CONSTRUCTOR
+        function Computer(mainCard, cpu, ram, harddisk, newVersion) {
+            this._mainCard = mainCard;
+            this._cpu = cpu;
+            this._ram = ram;
+            this._harddisk = harddisk;
+            this._newVersion = newVersion;
+        }
+        // FUNCTION
+        Computer.prototype.computerInformation = function () {
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
+            console.log(result);
+        };
+        return Computer;
+    }()); //end class Computer
+    // 2.CLASS (MSI)
+    var Msi = /** @class */ (function (_super) {
+        __extends(Msi, _super);
+        function Msi() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Msi;
+    }(Computer));
+    // 3.CLASS (ASUS)
+    var Asus = /** @class */ (function (_super) {
+        __extends(Asus, _super);
+        function Asus() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Asus;
+    }(Computer));
+    // INTANCE (Computer)
+    var computerInstance = new Computer("Computer", "i7", 8, "1TB", true);
+    console.log("MAIN CARD: " + computerInstance._mainCard);
+    console.log("CPU: " + computerInstance._cpu);
+    console.log("RAM: " + computerInstance._ram);
+    console.log("HARD DISK: " + computerInstance._harddisk);
+    console.log("Version: " + computerInstance._newVersion);
+    computerInstance.computerInformation();
+    console.log("**********************************************");
+    var msiInstance = new Msi("Msi", "i9", 16, "4TB", true);
+    console.log("MAIN CARD: " + msiInstance._mainCard);
+    console.log("CPU: " + msiInstance._cpu);
+    console.log("RAM: " + msiInstance._ram);
+    console.log("HARD DISK: " + msiInstance._harddisk);
+    console.log("Version: " + msiInstance._newVersion);
+    msiInstance.computerInformation();
+    console.log("**********************************************");
+    var asusInstance = new Asus("Asus", "i9", 32, "2TB", true);
+    console.log("MAIN CARD: " + asusInstance._mainCard);
+    console.log("CPU: " + asusInstance._cpu);
+    console.log("RAM: " + asusInstance._ram);
+    console.log("HARD DISK: " + asusInstance._harddisk);
+    console.log("Version: " + asusInstance._newVersion);
+    asusInstance.computerInformation();
+};
+tsInheritance();
 // #### ABSTRACT #################################################
 // TypeScript Abstract
 // super
