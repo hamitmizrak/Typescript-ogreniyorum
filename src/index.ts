@@ -248,17 +248,47 @@ let tsEnum = () => {
         dell = "DELL",
         hp = "HP"
     }
+
     console.log(computerTrade.msi);
     let computerOtherTrade: computerTrade = computerTrade.dell;
     console.log(computerOtherTrade);
 };
-tsEnum()
+//tsEnum();
 
 
 // #### CLASS #################################################
 // TypeScript Sınıflar
 // OOP
-// this,super
+// this
+let tsClass = () => {
+    class Computer {
+        // DATA TYPES
+        _computerName: string;
+        _ram: number;
+        _newVersion: boolean;
+
+        // CONSTRUCTOR
+        constructor(computerName: string, ram: number, newVersion: boolean) {
+            this._computerName = computerName;
+            this._ram = ram;
+            this._newVersion = newVersion;
+        }
+
+        // FUNCTION
+        computerInformation(): void {
+            let result = `Computer Name: ${this._computerName} Computer Ram: ${this._ram} Computer version: ${this._newVersion}`;
+            console.log(result);
+        } //end function
+    } //end Computer
+
+    // INSTANCE
+    let computerIntance = new Computer("Msi",8,true);
+    console.log("NAME: "+ computerIntance._computerName);
+    console.log("RAM: "+ computerIntance._ram);
+    console.log("VERSION: "+ computerIntance._newVersion);
+    
+}
+tsClass()
 
 
 // #### INHERITANCE #################################################
@@ -269,6 +299,7 @@ tsEnum()
 
 // #### ABSTRACT #################################################
 // TypeScript Abstract
+// super
 
 
 // #### GENERICS #################################################
