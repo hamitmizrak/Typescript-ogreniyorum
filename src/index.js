@@ -338,7 +338,71 @@ var tsInheritance = function () {
     console.log("TypeC: " + asusInstance._typeC);
     asusInstance.computerInformation();
 };
-tsInheritance();
+//tsInheritance();
+// #### ACCESS MODIFIER #################################################
+// TypeScript Sınıflar
+// OOP
+// this
+var tsAccessModifierClass = function () {
+    // CLASS
+    var Computer = /** @class */ (function () {
+        // CONSTRUCTOR
+        function Computer(mainCard, cpu, ram, harddisk, newVersion) {
+            this._mainCard = mainCard;
+            this._cpu = cpu;
+            this._ram = ram;
+            this._harddisk = harddisk;
+            this._newVersion = newVersion;
+        }
+        // FUNCTION
+        Computer.prototype.computerInformation = function () {
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
+            console.log(result);
+        };
+        return Computer;
+    }()); //end class Computer
+    // 2.CLASS (MSI)
+    // protected: subClass alanda çalışır.
+    var Msi = /** @class */ (function (_super) {
+        __extends(Msi, _super);
+        // Constructor
+        function Msi(mainCard, cpu, ram, harddisk, newVersion, usb) {
+            //super: üst atadan gelen bilgileri gösterir
+            var _this = _super.call(this, mainCard, cpu, ram, harddisk, newVersion) || this;
+            //this global state gösterir.
+            _this._usb = usb;
+            return _this;
+        }
+        // function
+        Msi.prototype.computerInformation = function () {
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, "  NewVersion: ").concat(this._newVersion, " USB: ").concat(this._usb);
+            console.log(result);
+        };
+        return Msi;
+    }(Computer));
+    // INTANCE (Computer)
+    var computerInstance = new Computer("Computer", "i7", 8, "1TB", false);
+    console.log("MAIN CARD: " + computerInstance._mainCard);
+    console.log("CPU: " + computerInstance._cpu);
+    console.log("RAM: " + computerInstance._ram);
+    //console.log("HARD DISK: " + computerInstance._harddisk);
+    //console.log("Version: " + computerInstance._newVersion);
+    computerInstance.computerInformation();
+    console.log("**********************************************");
+    // INSTANCE (MSI)
+    var msiInstance = new Msi("Msi", "i9", 16, "4TB", true, "Usb2");
+    console.log("MAIN CARD: " + msiInstance._mainCard);
+    console.log("CPU: " + msiInstance._cpu);
+    console.log("RAM: " + msiInstance._ram);
+    //console.log("HARD DISK: " + msiInstance._harddisk);
+    //console.log("Version: " + msiInstance._newVersion);
+    console.log("USB: " + msiInstance._usb);
+    msiInstance.computerInformation();
+    console.log("**********************************************");
+    // console.log("RAM: " + computerIntance._ram); //private: sadece o classta çalışır
+    // console.log("VERSION: " + computerIntance._newVersion); // protected extends değilse sadece o classta çalışır
+};
+tsAccessModifierClass();
 // #### ABSTRACT #################################################
 // TypeScript Abstract
 // super
