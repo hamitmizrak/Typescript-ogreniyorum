@@ -276,14 +276,17 @@ var tsInheritance = function () {
     // 2.CLASS (MSI)
     var Msi = /** @class */ (function (_super) {
         __extends(Msi, _super);
-        function Msi() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        // Field
         // Constructor
+        function Msi(mainCard, cpu, ram, harddisk, newVersion, usb) {
+            //super: üst atadan gelen bilgileri gösterir
+            var _this = _super.call(this, mainCard, cpu, ram, harddisk, newVersion) || this;
+            //this global state gösterir.
+            _this._usb = usb;
+            return _this;
+        }
         // function
         Msi.prototype.computerInformation = function () {
-            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion, " USB: ").concat(this._usb);
             console.log(result);
         };
         return Msi;
@@ -291,14 +294,17 @@ var tsInheritance = function () {
     // 3.CLASS (ASUS)
     var Asus = /** @class */ (function (_super) {
         __extends(Asus, _super);
-        function Asus() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        // Field
         // Constructor
+        function Asus(mainCard, cpu, ram, harddisk, newVersion, typeC) {
+            //super: üst atadan gelen bilgileri gösterir
+            var _this = _super.call(this, mainCard, cpu, ram, harddisk, newVersion) || this;
+            //this global state gösterir.
+            _this._typeC = typeC;
+            return _this;
+        }
         // function
         Asus.prototype.computerInformation = function () {
-            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion, " USB: ").concat(this._typeC);
             console.log(result);
         };
         return Asus;
@@ -312,20 +318,24 @@ var tsInheritance = function () {
     console.log("Version: " + computerInstance._newVersion);
     computerInstance.computerInformation();
     console.log("**********************************************");
-    var msiInstance = new Msi("Msi", "i9", 16, "4TB", true);
+    // INSTANCE (MSI)
+    var msiInstance = new Msi("Msi", "i9", 16, "4TB", true, "Usb2");
     console.log("MAIN CARD: " + msiInstance._mainCard);
     console.log("CPU: " + msiInstance._cpu);
     console.log("RAM: " + msiInstance._ram);
     console.log("HARD DISK: " + msiInstance._harddisk);
     console.log("Version: " + msiInstance._newVersion);
+    console.log("USB: " + msiInstance._usb);
     msiInstance.computerInformation();
     console.log("**********************************************");
-    var asusInstance = new Asus("Asus", "i9", 32, "2TB", false);
+    // INSTANCE (ASUS)
+    var asusInstance = new Asus("Asus", "i9", 32, "2TB", false, "TypeC");
     console.log("MAIN CARD: " + asusInstance._mainCard);
     console.log("CPU: " + asusInstance._cpu);
     console.log("RAM: " + asusInstance._ram);
     console.log("HARD DISK: " + asusInstance._harddisk);
     console.log("Version: " + asusInstance._newVersion);
+    console.log("TypeC: " + asusInstance._typeC);
     asusInstance.computerInformation();
 };
 tsInheritance();
