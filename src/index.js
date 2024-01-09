@@ -1,3 +1,6 @@
+"use strict";
+// npm run typescript 
+// npm run nodemon
 /*
 Javascript Nedir ?
 
@@ -130,38 +133,62 @@ var tsArray = function () {
     var tuple2 = [44, "str", true];
 };
 //tsArray()
+// number,string,boolean,any
+// #### OBJECT  #################################################
+var tsObject = function () {
+    // TypeScript Object 
+    console.log("TypeScript Object");
+    // Normal object
+    // let computer={
+    //     computerName:"Msi Titan",
+    //     trade:"msi",
+    //     year:"2024"
+    // }
+    var computer = {
+        computerName: "Msi Titan",
+        trade: "msi",
+        year: 2024,
+        newVersion: true
+    };
+    console.log(computer.computerName);
+    console.log(computer.trade);
+    console.log(computer.year);
+    console.log(computer.newVersion);
+};
+//tsObject();
 // #### FUNCTIONS #################################################
 // TypeScript Fonksiyonlar
 // void: dönüşü olmayan (Yani işlem sonunda bana birşey döndermee)
-function tsFunction(x, y, z) {
-    console.log("Normal: ".concat(x, " ").concat(y, " ").concat(z));
+/*function tsFunction(x,y,z){
+    console.log(`Normal: ${x} ${y} ${z}`);
 }
-tsFunction(4, 10, 99);
+tsFunction(4,10,99);*/
 function tsFunction2(x, y, z) {
     console.log("TS Function2: ".concat(x, " ").concat(y, " ").concat(z));
 }
-tsFunction2(4, 10, "Merhabalar");
+//tsFunction2(4,10,"Merhabalar")
 function tsFunction3(x, y, z) {
     console.log("TS Function3: ".concat(x, " ").concat(y, " ").concat(z));
 }
-tsFunction3(44, 10, "Merhabalar");
-tsFunction3(true, 10, "Merhabalar");
-tsFunction3("Malatya", 10, "Merhabalar");
+//tsFunction3(44,10,"Merhabalar");
+//tsFunction3(true,10,"Merhabalar");
+//tsFunction3("Malatya",10,"Merhabalar");
 // void: geriye bir şey dönderme
 function tsFunction4(x, y, z) {
     console.log("TS Function4: ".concat(x, " ").concat(y, " ").concat(z));
 }
-tsFunction4("Malatya", 10, "Merhabalar");
+//tsFunction4("Malatya",10,"Merhabalar");
 function tsFunction5(x, y, z) {
     //console.log(`TS Function4: ${x} ${y} ${z}`); 
     //return 10;
     //return Number(x)+y+Number(z);
     return parseInt(x) + y + parseFloat(z);
 }
-var result5 = tsFunction5("44", 10, "99.12");
-console.log(result5);
+//const result5=tsFunction5("44",10,"99.12");
+//console.log(result5);
 // Bitirme Projesini PDF 
 // tsconfig.json
+// tsc -w
 // tsc -w index.ts 
 // nodemon 
 // Web pack 

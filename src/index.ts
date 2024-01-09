@@ -1,3 +1,6 @@
+// npm run typescript 
+// npm run nodemon
+
 /*
 Javascript Nedir ?
 
@@ -83,6 +86,7 @@ function staticDataTypes() {
     // const data5:number;
     // console.log(data5);
 }
+
 //staticDataTypes()
 
 
@@ -130,74 +134,109 @@ let tsArray = () => {
     //array[5] = 23;
     //console.log(array[array.length - 1]);
 
-    let array2: number[]   = [1, 2, 9, 5, 3];
-    let array3 :string[]   = ["İstanbul","Ankara","Adana"]
-    let array4 :boolean[]  = [3>1, 44<1,true]
-    let array5 :any[]      = [44,"str",true]
+    let array2: number[] = [1, 2, 9, 5, 3];
+    let array3: string[] = ["İstanbul", "Ankara", "Adana"]
+    let array4: boolean[] = [3 > 1, 44 < 1, true]
+    let array5: any[] = [44, "str", true]
 
     // tuple: Veri olarak birden fazla datatypes tek bir bileşende göstermek için kullanıyoruz.
-    let tuple1 :[number,string]=[1,"Adana"];
-    let result=`${tuple1[0]} => ${tuple1[1]}`
-    console.log(result );
-    tuple1.push(2,"Adıyaman");
-    tuple1.push(3,"Afyon");
-    tuple1.push(4,"Bolu");
-    tuple1.push(5,"Amasya");
-    tuple1.forEach((temp)=>{
+    let tuple1: [number, string] = [1, "Adana"];
+    let result = `${tuple1[0]} => ${tuple1[1]}`
+    console.log(result);
+    tuple1.push(2, "Adıyaman");
+    tuple1.push(3, "Afyon");
+    tuple1.push(4, "Bolu");
+    tuple1.push(5, "Amasya");
+    tuple1.forEach((temp) => {
         console.log(`${temp}`)
     });
 
-    let tuple2 :[number,string,boolean]=[44,"str",true];
+    let tuple2: [number, string, boolean] = [44, "str", true];
 }
 //tsArray()
 
+// number,string,boolean,any
+// #### OBJECT  #################################################
+let tsObject = () => {
+    // TypeScript Object 
+    console.log("TypeScript Object");
+    
+    // Normal object
+    // let computer={
+    //     computerName:"Msi Titan",
+    //     trade:"msi",
+    //     year:"2024"
+    // }
+
+    let computer : {
+        computerName:string,
+        trade:string,
+        year:number,
+        newVersion:boolean
+
+    } ={
+        computerName:"Msi Titan",
+        trade:"msi",
+        year:2024,
+        newVersion:true
+    }
+    console.log(computer.computerName);
+    console.log(computer.trade);
+    console.log(computer.year);
+    console.log(computer.newVersion);
+    
+}
+//tsObject();
 
 // #### FUNCTIONS #################################################
 // TypeScript Fonksiyonlar
 // void: dönüşü olmayan (Yani işlem sonunda bana birşey döndermee)
-function tsFunction(x,y,z){
+/*function tsFunction(x,y,z){
     console.log(`Normal: ${x} ${y} ${z}`); 
 }
-tsFunction(4,10,99);
+tsFunction(4,10,99);*/
 
-function tsFunction2(x:number,y:number,z:string){
-    console.log(`TS Function2: ${x} ${y} ${z}`); 
+function tsFunction2(x: number, y: number, z: string) {
+    console.log(`TS Function2: ${x} ${y} ${z}`);
 }
-tsFunction2(4,10,"Merhabalar")
+
+//tsFunction2(4,10,"Merhabalar")
 
 
-function tsFunction3(x:any,y:number,z:string){
-    console.log(`TS Function3: ${x} ${y} ${z}`); 
+function tsFunction3(x: any, y: number, z: string) {
+    console.log(`TS Function3: ${x} ${y} ${z}`);
 }
-tsFunction3(44,10,"Merhabalar");
-tsFunction3(true,10,"Merhabalar");
-tsFunction3("Malatya",10,"Merhabalar");
+
+//tsFunction3(44,10,"Merhabalar");
+//tsFunction3(true,10,"Merhabalar");
+//tsFunction3("Malatya",10,"Merhabalar");
 
 // void: geriye bir şey dönderme
-function tsFunction4(x:any,y:number,z:string):void{
-    console.log(`TS Function4: ${x} ${y} ${z}`); 
+function tsFunction4(x: any, y: number, z: string): void {
+    console.log(`TS Function4: ${x} ${y} ${z}`);
 }
-tsFunction4("Malatya",10,"Merhabalar");
 
-function tsFunction5(x:any,y:number,z:string):number{
+//tsFunction4("Malatya",10,"Merhabalar");
+
+function tsFunction5(x: any, y: number, z: string): number {
     //console.log(`TS Function4: ${x} ${y} ${z}`); 
     //return 10;
     //return Number(x)+y+Number(z);
-    return parseInt(x)+y+parseFloat(z);
+    return parseInt(x) + y + parseFloat(z);
 }
 
-const result5=tsFunction5("44",10,"99.12");
-console.log(result5);
+//const result5=tsFunction5("44",10,"99.12");
+//console.log(result5);
 
 // Bitirme Projesini PDF 
 // tsconfig.json
+// tsc -w
 // tsc -w index.ts 
 // nodemon 
 // Web pack 
 // live-server
 // Babil
 // Node JS Server- HTML- Document - URL - EXPRESS
-
 
 // #### ENUM #################################################
 // TypeScript Enum
@@ -243,7 +282,4 @@ console.log(result5);
 // TypeScript Inference
 // TypeScript Type Compatibility
 // TypeScript Intersection Types
-
-
-
 

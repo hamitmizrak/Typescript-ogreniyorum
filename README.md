@@ -42,12 +42,32 @@ npm update express
 ---
 ## Linux 
 ```sh
+pwd
+whoami
 ls -la
 cd .
 cd ..
 mkdir dizin
 cat >> deneme.tx
 ```
+
+---
+## Web Pack
+```sh
+
+```
+
+---
+## RUN
+```sh
+npm run typescript
+npm run nodemon
+npm run tsconfig  
+tsc 
+tsc -w
+```
+
+--- 
 
 
 ## Package Json 
@@ -74,25 +94,36 @@ nodemon -q index.js
 npm install -g typescript 
 npm install typescript --save-dev
 
+tsc 
 tsc index.ts
 
 tsc -w index.ts
 nodemon index.js
 ```
 
-
 ---
-## Web Pack
+## tsconfig.json
 ```sh
+npm init -y 
+npm i -g nodemon  
+npm i nodemon  --save-dev
+npm i -g typescript
+npm i  typescript --save-dev
 
+tsc --init 
+tsc --init --locale tr
+tsc
+tsc -w
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon ./src/index.js",
+    "typescript": "tsc -w ./src/index.ts",
+    "typescript44": "tsc -w"
+  },
 ```
 
----
-## RUN
-```sh
-npm run typescript
-npm run nodemon 
-```
 
---- 
+
+
 
