@@ -1,6 +1,5 @@
 "use strict";
-// npm run typescript 
-// npm run nodemon
+// https://www.typescriptlang.org/
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -16,6 +15,10 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+// npm run typescript 
+// npm run nodemon
+// tsc 
+// tsc -w
 /*
 Javascript Nedir ?
 
@@ -213,6 +216,7 @@ function tsFunction5(x, y, z) {
 // #### ENUM #################################################
 // TypeScript Enum
 var tsEnum = function () {
+    console.log("Enum");
     // ENUM
     var computerTrade;
     (function (computerTrade) {
@@ -230,6 +234,12 @@ var tsEnum = function () {
 // OOP
 // this
 var tsClass = function () {
+    console.log("Class Examples");
+    /* CLASS
+    FIELD
+    CONSTRUCTOR
+    FUNCTION
+     */
     var Computer = /** @class */ (function () {
         // CONSTRUCTOR
         function Computer(computerName, ram, newVersion) {
@@ -249,16 +259,57 @@ var tsClass = function () {
     console.log("NAME: " + computerIntance._computerName);
     console.log("RAM: " + computerIntance._ram);
     console.log("VERSION: " + computerIntance._newVersion);
-};
-//tsClass()
+}; //end common Function
+tsClass();
 // #### OPTIONAL #################################################
 // TypeScript Sınıflar
+var tsOptionalClass = function () {
+    console.log("TypeScript Optional Class");
+    var Computer = /** @class */ (function () {
+        // CONSTRUCTOR
+        function Computer(computerName, ram, newVersion, copilot) {
+            this._computerName = computerName;
+            this._ram = ram;
+            this._newVersion = newVersion;
+            // Optional(?)
+            this._copilot = copilot;
+        }
+        // FUNCTION
+        Computer.prototype.computerInformation = function () {
+            var result = "Information => Computer Name: ".concat(this._computerName, " Computer Ram: ").concat(this._ram, " Computer version: ").concat(this._newVersion);
+            console.log(result);
+        }; //end function
+        // Optional(?:)
+        Computer.prototype.everyComputerCopilot = function () {
+            if (this._copilot !== undefined) {
+                console.error("YES AI computer available");
+                var other = "Computer Name: ".concat(this._computerName, " Computer Ram: ").concat(this._ram, " Computer version: ").concat(this._newVersion);
+                var data = other + "Copilot: ".concat(this._copilot);
+                console.log(data);
+            }
+            else {
+                console.error("No AI computer available");
+                var other = "Computer Name: ".concat(this._computerName, " Computer Ram: ").concat(this._ram, " Computer version: ").concat(this._newVersion);
+                console.log(other);
+            }
+        };
+        return Computer;
+    }()); //end Computer
+    // INSTANCE
+    // copilot: argüman eklenebilinirde eklenmeyebilirde
+    var computerIntance1 = new Computer("Msi", 8, true);
+    computerIntance1.everyComputerCopilot();
+    var computerIntance2 = new Computer("Msi", 8, true, true);
+    computerIntance2.everyComputerCopilot();
+};
+//tsOptionalClass();
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 // this
 // super
 var tsInheritance = function () {
-    // CLASS
+    console.log("TypeScript Inheritance Class");
+    // 1.CLASS (COMMON CLASS)
     var Computer = /** @class */ (function () {
         // CONSTRUCTOR
         function Computer(mainCard, cpu, ram, harddisk, newVersion) {
@@ -404,7 +455,7 @@ var tsAccessModifierClass = function () {
     // console.log("RAM: " + computerIntance._ram); //private: sadece o classta çalışır
     // console.log("VERSION: " + computerIntance._newVersion); // protected extends değilse sadece o classta çalışır
 };
-tsAccessModifierClass();
+//tsAccessModifierClass()
 // #### ENCAPSULATION #################################################
 // Encapsulation: private
 /*
@@ -445,7 +496,7 @@ var tsEncapsulationClass = function () {
         };
         return Computer;
     }()); //end class Computer
-    // INTANCE (Computer)
+    // Encapsulation (Computer)
     var computerInstance = new Computer("Computer", "i7", 8, "1TB", false);
     console.log("MAIN CARD: " + computerInstance._mainCard);
     console.log("CPU: " + computerInstance._cpu);
@@ -460,7 +511,7 @@ var tsEncapsulationClass = function () {
     computerInstance.computerInformation();
     console.log("**********************************************");
 };
-tsEncapsulationClass();
+//tsEncapsulationClass()
 // #### ABSTRACT #################################################
 // TypeScript Abstract
 // super
@@ -468,7 +519,6 @@ tsEncapsulationClass();
 // TypeScript Generics
 // #### INTERFACE #################################################
 // TypeScript Interface
-// TypeScript Null ve Undefined
 // TypeScript Never
 // TypeScript Type Assertion
 // TypeScript Type Aliases
@@ -477,7 +527,6 @@ tsEncapsulationClass();
 // TypeScript Mixins
 // TypeScript Interfaces vs Types
 // TypeScript Modules
-// TypeScript Namespaces
 // TypeScript Namespaces vs Modules
 // TypeScript Ambient Namespaces
 // TypeScript Ambient Modules

@@ -1,5 +1,9 @@
+// https://www.typescriptlang.org/
+
 // npm run typescript 
 // npm run nodemon
+// tsc 
+// tsc -w
 
 /*
 Javascript Nedir ?
@@ -241,7 +245,7 @@ function tsFunction5(x: any, y: number, z: string): number {
 // #### ENUM #################################################
 // TypeScript Enum
 let tsEnum = () => {
-
+    console.log("Enum");
     // ENUM
     enum computerTrade {
         msi = "MSI",
@@ -255,12 +259,18 @@ let tsEnum = () => {
 };
 //tsEnum();
 
-
 // #### CLASS #################################################
 // TypeScript Sınıflar
 // OOP
 // this
 let tsClass = () => {
+    console.log("Class Examples");
+    /* CLASS
+    FIELD
+    CONSTRUCTOR
+    FUNCTION
+     */
+
     class Computer {
         // DATA TYPES
         _computerName: string;
@@ -279,7 +289,6 @@ let tsClass = () => {
             let result = `Information => Computer Name: ${this._computerName} Computer Ram: ${this._ram} Computer version: ${this._newVersion}`;
             console.log(result);
         } //end function
-
     } //end Computer
 
     // INSTANCE
@@ -287,21 +296,68 @@ let tsClass = () => {
     console.log("NAME: " + computerIntance._computerName);
     console.log("RAM: " + computerIntance._ram);
     console.log("VERSION: " + computerIntance._newVersion);
-}
-//tsClass()
+} //end common Function
+tsClass()
 
 // #### OPTIONAL #################################################
 // TypeScript Sınıflar
+let tsOptionalClass = () => {
+    console.log("TypeScript Optional Class");
+    class Computer {
+        // DATA TYPES
+        _computerName: string;
+        _ram: number;
+        _newVersion: boolean;
+        // eğer Veri eklensin mi eklenmesin mi ? diye soruyorsak burada optiona(?)
+        _copilot?: boolean;
 
+        // CONSTRUCTOR
+        constructor(computerName: string, ram: number, newVersion: boolean, copilot?: boolean) {
+            this._computerName = computerName;
+            this._ram = ram;
+            this._newVersion = newVersion;
+            // Optional(?)
+            this._copilot = copilot;
+        }
 
+        // FUNCTION
+        computerInformation(): void {
+            let result = `Information => Computer Name: ${this._computerName} Computer Ram: ${this._ram} Computer version: ${this._newVersion}`;
+            console.log(result);
+        } //end function
+
+        // Optional(?:)
+        everyComputerCopilot() {
+            if (this._copilot !== undefined) {
+                console.error("YES AI computer available");
+                const other = `Computer Name: ${this._computerName} Computer Ram: ${this._ram} Computer version: ${this._newVersion}`;
+                const data = other + `Copilot: ${this._copilot}`;
+                console.log(data);
+            } else {
+                console.error("No AI computer available");
+                const other = `Computer Name: ${this._computerName} Computer Ram: ${this._ram} Computer version: ${this._newVersion}`;
+                console.log(other);
+            }
+        }
+    } //end Computer
+
+    // INSTANCE
+    // copilot: argüman eklenebilinirde eklenmeyebilirde
+    let computerIntance1 = new Computer("Msi", 8, true);
+    computerIntance1.everyComputerCopilot();
+
+    let computerIntance2 = new Computer("Msi", 8, true,true);
+    computerIntance2.everyComputerCopilot();
+}
+//tsOptionalClass();
 
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 // this
 // super
 const tsInheritance = () => {
-
-    // CLASS
+    console.log("TypeScript Inheritance Class");
+    // 1.CLASS (COMMON CLASS)
     class Computer {
         // FIELD
         _mainCard: string;
@@ -317,7 +373,6 @@ const tsInheritance = () => {
             this._ram = ram;
             this._harddisk = harddisk;
             this._newVersion = newVersion;
-
         }
 
         // FUNCTION
@@ -420,7 +475,7 @@ let tsAccessModifierClass = () => {
         _mainCard: string; // Access: birşey yazmazsam zaten public
         public _cpu: string;
         public _ram: number;
-        private _harddisk: string;
+        private _harddisk: string; // encapsulation
         protected _newVersion: boolean;
 
         // CONSTRUCTOR
@@ -447,7 +502,6 @@ let tsAccessModifierClass = () => {
 
         // Constructor
         constructor(mainCard: string, cpu: string, ram: number, harddisk: string, newVersion: boolean, usb: string) {
-
             //super: üst atadan gelen bilgileri gösterir
             super(mainCard, cpu, ram, harddisk, newVersion)
 
@@ -487,8 +541,7 @@ let tsAccessModifierClass = () => {
     // console.log("RAM: " + computerIntance._ram); //private: sadece o classta çalışır
     // console.log("VERSION: " + computerIntance._newVersion); // protected extends değilse sadece o classta çalışır
 }
-tsAccessModifierClass()
-
+//tsAccessModifierClass()
 
 // #### ENCAPSULATION #################################################
 // Encapsulation: private
@@ -527,7 +580,7 @@ let tsEncapsulationClass = () => {
 
         // SET (Veriyi manipulation, yani değiştirme)
         // SET: veri dönderilmezzzz
-        set encapsulationNewVersion(version: boolean){
+        set encapsulationNewVersion(version: boolean) {
             this._newVersion = version;
         }
 
@@ -539,48 +592,43 @@ let tsEncapsulationClass = () => {
     } //end class Computer
 
 
-    // INTANCE (Computer)
+    // Encapsulation (Computer)
     const computerInstance = new Computer("Computer", "i7", 8, "1TB", false);
     console.log("MAIN CARD: " + computerInstance._mainCard);
     console.log("CPU: " + computerInstance._cpu);
     console.log("RAM: " + computerInstance._ram);
     console.log("HARD DISK: " + computerInstance._harddisk);
+
     // private böyle yazamazsınız sadece encapsulation olarak private kullanabilirsin.
     // Encapsulation(SET)
-    computerInstance.encapsulationNewVersion=true;
+    computerInstance.encapsulationNewVersion = true;
     // Encapsulation(GET)
     console.log("Version: " + computerInstance.encapsulationNewVersion);
-    
+
     //console.log("Version: " + computerInstance._newVersion);
     computerInstance.computerInformation();
     console.log("**********************************************");
 }
-tsEncapsulationClass()
-
+//tsEncapsulationClass()
 
 // #### ABSTRACT #################################################
 // TypeScript Abstract
 // super
 
-
 // #### GENERICS #################################################
 // TypeScript Generics
-
 
 // #### INTERFACE #################################################
 // TypeScript Interface
 
-// TypeScript Null ve Undefined
 // TypeScript Never
 // TypeScript Type Assertion
 // TypeScript Type Aliases
 // TypeScript Object Methods
-
 // TypeScript Decorators
 // TypeScript Mixins
 // TypeScript Interfaces vs Types
 // TypeScript Modules
-// TypeScript Namespaces
 // TypeScript Namespaces vs Modules
 // TypeScript Ambient Namespaces
 // TypeScript Ambient Modules
