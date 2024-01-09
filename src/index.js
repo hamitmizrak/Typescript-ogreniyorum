@@ -197,9 +197,22 @@ function tsFunction5(x, y, z) {
 // Node JS Server- HTML- Document - URL - EXPRESS
 // #### ENUM #################################################
 // TypeScript Enum
+var tsEnum = function () {
+    // ENUM
+    var computerTrade;
+    (function (computerTrade) {
+        computerTrade["msi"] = "MSI";
+        computerTrade["dell"] = "DELL";
+        computerTrade["hp"] = "HP";
+    })(computerTrade || (computerTrade = {}));
+    console.log(computerTrade.msi);
+    var computerOtherTrade = computerTrade.dell;
+    console.log(computerOtherTrade);
+};
+tsEnum();
 // #### CLASS #################################################
 // TypeScript Sınıflar
-// OOP 
+// OOP
 // this,super
 // #### INHERITANCE #################################################
 // TypeScript Inheritance

@@ -160,7 +160,7 @@ let tsArray = () => {
 let tsObject = () => {
     // TypeScript Object 
     console.log("TypeScript Object");
-    
+
     // Normal object
     // let computer={
     //     computerName:"Msi Titan",
@@ -168,23 +168,23 @@ let tsObject = () => {
     //     year:"2024"
     // }
 
-    let computer : {
-        computerName:string,
-        trade:string,
-        year:number,
-        newVersion:boolean
+    let computer: {
+        computerName: string,
+        trade: string,
+        year: number,
+        newVersion: boolean
 
-    } ={
-        computerName:"Msi Titan",
-        trade:"msi",
-        year:2024,
-        newVersion:true
+    } = {
+        computerName: "Msi Titan",
+        trade: "msi",
+        year: 2024,
+        newVersion: true
     }
     console.log(computer.computerName);
     console.log(computer.trade);
     console.log(computer.year);
     console.log(computer.newVersion);
-    
+
 }
 //tsObject();
 
@@ -240,11 +240,24 @@ function tsFunction5(x: any, y: number, z: string): number {
 
 // #### ENUM #################################################
 // TypeScript Enum
+let tsEnum = () => {
+
+    // ENUM
+    enum computerTrade {
+        msi = "MSI",
+        dell = "DELL",
+        hp = "HP"
+    }
+    console.log(computerTrade.msi);
+    let computerOtherTrade: computerTrade = computerTrade.dell;
+    console.log(computerOtherTrade);
+};
+tsEnum()
 
 
 // #### CLASS #################################################
 // TypeScript Sınıflar
-// OOP 
+// OOP
 // this,super
 
 
