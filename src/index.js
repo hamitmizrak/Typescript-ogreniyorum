@@ -279,6 +279,13 @@ var tsInheritance = function () {
         function Msi() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
+        // Field
+        // Constructor
+        // function
+        Msi.prototype.computerInformation = function () {
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
+            console.log(result);
+        };
         return Msi;
     }(Computer));
     // 3.CLASS (ASUS)
@@ -287,10 +294,17 @@ var tsInheritance = function () {
         function Asus() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
+        // Field
+        // Constructor
+        // function
+        Asus.prototype.computerInformation = function () {
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
+            console.log(result);
+        };
         return Asus;
     }(Computer));
     // INTANCE (Computer)
-    var computerInstance = new Computer("Computer", "i7", 8, "1TB", true);
+    var computerInstance = new Computer("Computer", "i7", 8, "1TB", false);
     console.log("MAIN CARD: " + computerInstance._mainCard);
     console.log("CPU: " + computerInstance._cpu);
     console.log("RAM: " + computerInstance._ram);
@@ -306,7 +320,7 @@ var tsInheritance = function () {
     console.log("Version: " + msiInstance._newVersion);
     msiInstance.computerInformation();
     console.log("**********************************************");
-    var asusInstance = new Asus("Asus", "i9", 32, "2TB", true);
+    var asusInstance = new Asus("Asus", "i9", 32, "2TB", false);
     console.log("MAIN CARD: " + asusInstance._mainCard);
     console.log("CPU: " + asusInstance._cpu);
     console.log("RAM: " + asusInstance._ram);

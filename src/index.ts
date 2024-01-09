@@ -324,6 +324,13 @@ const tsInheritance = () => {
 
     // 2.CLASS (MSI)
     class Msi extends Computer{
+        // Field
+        // Constructor
+        // function
+        computerInformation():void{
+            let result=`Information => MainCard: ${this._mainCard} Cpu: ${this._cpu} Ram: ${this._ram} Harddisk: ${this._harddisk} NewVersion: ${this._newVersion}`;
+            console.log(result);
+        }
     }
 
      // 3.CLASS (ASUS)
@@ -331,10 +338,14 @@ const tsInheritance = () => {
         // Field
         // Constructor
         // function
+        computerInformation():void{
+            let result=`Information => MainCard: ${this._mainCard} Cpu: ${this._cpu} Ram: ${this._ram} Harddisk: ${this._harddisk} NewVersion: ${this._newVersion}`;
+            console.log(result);
+        }
     }
 
     // INTANCE (Computer)
-    const computerInstance=new Computer("Computer","i7",8,"1TB",true);
+    const computerInstance=new Computer("Computer","i7",8,"1TB",false);
     console.log("MAIN CARD: "+ computerInstance._mainCard);
     console.log("CPU: "+computerInstance._cpu);
     console.log("RAM: "+computerInstance._ram);
@@ -352,7 +363,7 @@ const tsInheritance = () => {
     msiInstance.computerInformation();
     console.log("**********************************************");
 
-    const asusInstance=new Asus("Asus","i9",32,"2TB",true);
+    const asusInstance=new Asus("Asus","i9",32,"2TB",false);
     console.log("MAIN CARD: "+ asusInstance._mainCard);
     console.log("CPU: "+asusInstance._cpu);
     console.log("RAM: "+asusInstance._ram);
