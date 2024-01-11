@@ -588,6 +588,7 @@ function typeAssertionsFunction() {
 //typeAssertionsFunction();
 // #### INTERFACE #################################################
 // TypeScript Interface
+// ###############################################################
 // TypeScript Never
 // TypeScript Decorators
 // TypeScript Mixins
