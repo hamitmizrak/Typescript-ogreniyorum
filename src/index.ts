@@ -709,6 +709,8 @@ abstractFunction();
 // TypeScript Generics
 
 // #### ASSERTIONS (CAST #################################################
+// TypeScript Type Assertions
+// TypeScript Type Aliases
 function typeAssertionsFunction() {
   console.log("type Assertions:  Tür değiştirme");
   let data;
@@ -734,11 +736,7 @@ function typeAssertionsFunction() {
 
 // #### INTERFACE #################################################
 // TypeScript Interface
-
 // TypeScript Never
-// TypeScript Type Assertion
-// TypeScript Type Aliases
-// TypeScript Object Methods
 // TypeScript Decorators
 // TypeScript Mixins
 // TypeScript Interfaces vs Types
