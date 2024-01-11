@@ -15,9 +15,13 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// npm run typescript 
+/*
+tsc -w
+npm run nodemon
+*/
+// npm run typescript
 // npm run nodemon
-// tsc 
+// tsc
 // tsc -w
 /*
 Javascript Nedir ?
@@ -74,7 +78,7 @@ function staticDataTypes() {
     // data=true;
     // console.log(data);
     // Data types: number,string,boolean
-    // type Safe: 
+    // type Safe:
     // TS datatypes (number)
     var data1 = 44;
     data1 = 99;
@@ -98,7 +102,7 @@ function staticDataTypes() {
     // const data5:number;
     // console.log(data5);
 }
-//staticDataTypes()
+//staticDataTypes();
 // #### DYNAMICS DATA TYPES #################################################
 var dynamicsDataTypes = function () {
     // Dynamics data types (any)
@@ -111,7 +115,7 @@ var dynamicsDataTypes = function () {
     console.log(data4);
     // unknown
     // any ile unknown arasındaki farklar
-    // null 
+    // null
     // undefined
 };
 //dynamicsDataTypes ();
@@ -129,7 +133,10 @@ var dynamicsDataTypes = function () {
 // TypeScript Döngüler
 var tsArray = function () {
     // TypeScript Diziler
-    var array = [1, 2, 9, 5, 3];
+    // 1.YOL
+    var array_0 = [1, 2, 9, 5, 3];
+    // 2.YOL
+    var array_1 = [1, 2, 9, 5, 3];
     //console.log(array[0]);
     //array[5] = 23;
     //console.log(array[array.length - 1]);
@@ -154,7 +161,7 @@ var tsArray = function () {
 // number,string,boolean,any
 // #### OBJECT  #################################################
 var tsObject = function () {
-    // TypeScript Object 
+    // TypeScript Object
     console.log("TypeScript Object");
     // Normal object
     // let computer={
@@ -166,7 +173,7 @@ var tsObject = function () {
         computerName: "Msi Titan",
         trade: "msi",
         year: 2024,
-        newVersion: true
+        newVersion: true,
     };
     console.log(computer.computerName);
     console.log(computer.trade);
@@ -197,19 +204,19 @@ function tsFunction4(x, y, z) {
 }
 //tsFunction4("Malatya",10,"Merhabalar");
 function tsFunction5(x, y, z) {
-    //console.log(`TS Function4: ${x} ${y} ${z}`); 
+    //console.log(`TS Function4: ${x} ${y} ${z}`);
     //return 10;
     //return Number(x)+y+Number(z);
     return parseInt(x) + y + parseFloat(z);
 }
 //const result5=tsFunction5("44",10,"99.12");
 //console.log(result5);
-// Bitirme Projesini PDF 
+// Bitirme Projesini PDF
 // tsconfig.json
 // tsc -w
-// tsc -w index.ts 
-// nodemon 
-// Web pack 
+// tsc -w index.ts
+// nodemon
+// Web pack
 // live-server
 // Babil
 // Node JS Server- HTML- Document - URL - EXPRESS
@@ -236,10 +243,10 @@ var tsEnum = function () {
 var tsClass = function () {
     console.log("Class Examples");
     /* CLASS
-    FIELD
-    CONSTRUCTOR
-    FUNCTION
-     */
+      FIELD
+      CONSTRUCTOR
+      FUNCTION
+       */
     var Computer = /** @class */ (function () {
         // CONSTRUCTOR
         function Computer(computerName, ram, newVersion) {
@@ -260,7 +267,7 @@ var tsClass = function () {
     console.log("RAM: " + computerIntance._ram);
     console.log("VERSION: " + computerIntance._newVersion);
 }; //end common Function
-tsClass();
+//tsClass()
 // #### OPTIONAL #################################################
 // TypeScript Sınıflar
 var tsOptionalClass = function () {
@@ -303,6 +310,126 @@ var tsOptionalClass = function () {
     computerIntance2.everyComputerCopilot();
 };
 //tsOptionalClass();
+// #### ACCESS MODIFIER #################################################
+// TypeScript Sınıflar
+// OOP
+// this
+var tsAccessModifierClass = function () {
+    // CLASS
+    var Computer = /** @class */ (function () {
+        // CONSTRUCTOR
+        function Computer(mainCard, cpu, ram, harddisk, newVersion) {
+            this._mainCard = mainCard;
+            this._cpu = cpu;
+            this._ram = ram;
+            this._harddisk = harddisk;
+            this._newVersion = newVersion;
+        }
+        // FUNCTION
+        Computer.prototype.computerInformation = function () {
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
+            console.log(result);
+        };
+        return Computer;
+    }()); //end class Computer
+    // 2.CLASS (MSI)
+    // protected: subClass alanda çalışır.
+    var Msi = /** @class */ (function (_super) {
+        __extends(Msi, _super);
+        // Constructor
+        function Msi(mainCard, cpu, ram, harddisk, newVersion, usb) {
+            //super: üst atadan gelen bilgileri gösterir
+            var _this = _super.call(this, mainCard, cpu, ram, harddisk, newVersion) || this;
+            //this global state gösterir.
+            _this._usb = usb;
+            return _this;
+        }
+        // function
+        Msi.prototype.computerInformation = function () {
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, "  NewVersion: ").concat(this._newVersion, " USB: ").concat(this._usb);
+            console.log(result);
+        };
+        return Msi;
+    }(Computer));
+    // INTANCE (Computer)
+    var computerInstance = new Computer("Computer", "i7", 8, "1TB", false);
+    console.log("MAIN CARD: " + computerInstance._mainCard);
+    console.log("CPU: " + computerInstance._cpu);
+    console.log("RAM: " + computerInstance._ram);
+    //console.log("HARD DISK: " + computerInstance._harddisk);
+    //console.log("Version: " + computerInstance._newVersion);
+    computerInstance.computerInformation();
+    console.log("**********************************************");
+    // INSTANCE (MSI)
+    var msiInstance = new Msi("Msi", "i9", 16, "4TB", true, "Usb2");
+    console.log("MAIN CARD: " + msiInstance._mainCard);
+    console.log("CPU: " + msiInstance._cpu);
+    console.log("RAM: " + msiInstance._ram);
+    //console.log("HARD DISK: " + msiInstance._harddisk);
+    //console.log("Version: " + msiInstance._newVersion);
+    console.log("USB: " + msiInstance._usb);
+    msiInstance.computerInformation();
+    console.log("**********************************************");
+    // console.log("RAM: " + computerIntance._ram); //private: sadece o classta çalışır
+    // console.log("VERSION: " + computerIntance._newVersion); // protected extends değilse sadece o classta çalışır
+};
+//tsAccessModifierClass()
+// #### ENCAPSULATION #################################################
+// Encapsulation: private
+/*
+ Encapsulation(Kapsulleme) bir sınıf içerisinde bazı verileri erişim kısıtlaması getirir.
+Amaç: Verinin dış dünyalayla kapalı olmasını sağlamak ancak sadece bizim belirlediğimiz arayüzde kullanabilelim.
+Encapsulation Kısaca: iç yapısı dış dünyayadan gizlenir. böylelikle veri güvenliğini sağlamış oluruz.
+ */
+var tsEncapsulationClass = function () {
+    // CLASS
+    var Computer = /** @class */ (function () {
+        // CONSTRUCTOR
+        function Computer(mainCard, cpu, ram, harddisk, newVersion) {
+            this._mainCard = mainCard;
+            this._cpu = cpu;
+            this._ram = ram;
+            this._harddisk = harddisk;
+            this._newVersion = newVersion;
+        }
+        Object.defineProperty(Computer.prototype, "encapsulationNewVersion", {
+            // ENCAPSULATION (private)
+            // GET (Veriyi getir, okuma)
+            // GET: veri döndeririz
+            get: function () {
+                return this._newVersion;
+            },
+            // SET (Veriyi manipulation, yani değiştirme)
+            // SET: veri dönderilmezzzz
+            set: function (version) {
+                this._newVersion = version;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        // FUNCTION
+        Computer.prototype.computerInformation = function () {
+            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
+            console.log(result);
+        };
+        return Computer;
+    }()); //end class Computer
+    // Encapsulation (Computer)
+    var computerInstance = new Computer("Computer", "i7", 8, "1TB", false);
+    console.log("MAIN CARD: " + computerInstance._mainCard);
+    console.log("CPU: " + computerInstance._cpu);
+    console.log("RAM: " + computerInstance._ram);
+    console.log("HARD DISK: " + computerInstance._harddisk);
+    // private böyle yazamazsınız sadece encapsulation olarak private kullanabilirsin.
+    // Encapsulation(SET)
+    computerInstance.encapsulationNewVersion = true;
+    // Encapsulation(GET)
+    console.log("Version: " + computerInstance.encapsulationNewVersion);
+    //console.log("Version: " + computerInstance._newVersion);
+    computerInstance.computerInformation();
+    console.log("**********************************************");
+};
+//tsEncapsulationClass()
 // #### INHERITANCE #################################################
 // TypeScript Inheritance
 // this
@@ -392,131 +519,69 @@ var tsInheritance = function () {
     asusInstance.computerInformation();
 };
 //tsInheritance();
-// #### ACCESS MODIFIER #################################################
-// TypeScript Sınıflar
-// OOP
-// this
-var tsAccessModifierClass = function () {
-    // CLASS
-    var Computer = /** @class */ (function () {
-        // CONSTRUCTOR
-        function Computer(mainCard, cpu, ram, harddisk, newVersion) {
-            this._mainCard = mainCard;
-            this._cpu = cpu;
-            this._ram = ram;
-            this._harddisk = harddisk;
-            this._newVersion = newVersion;
-        }
-        // FUNCTION
-        Computer.prototype.computerInformation = function () {
-            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
-            console.log(result);
-        };
-        return Computer;
-    }()); //end class Computer
-    // 2.CLASS (MSI)
-    // protected: subClass alanda çalışır.
-    var Msi = /** @class */ (function (_super) {
-        __extends(Msi, _super);
-        // Constructor
-        function Msi(mainCard, cpu, ram, harddisk, newVersion, usb) {
-            //super: üst atadan gelen bilgileri gösterir
-            var _this = _super.call(this, mainCard, cpu, ram, harddisk, newVersion) || this;
-            //this global state gösterir.
-            _this._usb = usb;
-            return _this;
-        }
-        // function
-        Msi.prototype.computerInformation = function () {
-            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, "  NewVersion: ").concat(this._newVersion, " USB: ").concat(this._usb);
-            console.log(result);
-        };
-        return Msi;
-    }(Computer));
-    // INTANCE (Computer)
-    var computerInstance = new Computer("Computer", "i7", 8, "1TB", false);
-    console.log("MAIN CARD: " + computerInstance._mainCard);
-    console.log("CPU: " + computerInstance._cpu);
-    console.log("RAM: " + computerInstance._ram);
-    //console.log("HARD DISK: " + computerInstance._harddisk);
-    //console.log("Version: " + computerInstance._newVersion);
-    computerInstance.computerInformation();
-    console.log("**********************************************");
-    // INSTANCE (MSI)
-    var msiInstance = new Msi("Msi", "i9", 16, "4TB", true, "Usb2");
-    console.log("MAIN CARD: " + msiInstance._mainCard);
-    console.log("CPU: " + msiInstance._cpu);
-    console.log("RAM: " + msiInstance._ram);
-    //console.log("HARD DISK: " + msiInstance._harddisk);
-    //console.log("Version: " + msiInstance._newVersion);
-    console.log("USB: " + msiInstance._usb);
-    msiInstance.computerInformation();
-    console.log("**********************************************");
-    // console.log("RAM: " + computerIntance._ram); //private: sadece o classta çalışır
-    // console.log("VERSION: " + computerIntance._newVersion); // protected extends değilse sadece o classta çalışır
-};
-//tsAccessModifierClass()
-// #### ENCAPSULATION #################################################
-// Encapsulation: private
-/*
- Encapsulation(Kapsulleme) bir sınıf içerisinde bazı verileri erişim kısıtlaması getirir.
-Amaç: Verinin dış dünyalayla kapalı olmasını sağlamak ancak sadece bizim belirlediğimiz arayüzde kullanabilelim.
-Encapsulation Kısaca: iç yapısı dış dünyayadan gizlenir. böylelikle veri güvenliğini sağlamış oluruz.
- */
-var tsEncapsulationClass = function () {
-    // CLASS
-    var Computer = /** @class */ (function () {
-        // CONSTRUCTOR
-        function Computer(mainCard, cpu, ram, harddisk, newVersion) {
-            this._mainCard = mainCard;
-            this._cpu = cpu;
-            this._ram = ram;
-            this._harddisk = harddisk;
-            this._newVersion = newVersion;
-        }
-        Object.defineProperty(Computer.prototype, "encapsulationNewVersion", {
-            // ENCAPSULATION (private)
-            // GET (Veriyi getir, okuma) 
-            // GET: veri döndeririz
-            get: function () {
-                return this._newVersion;
-            },
-            // SET (Veriyi manipulation, yani değiştirme)
-            // SET: veri dönderilmezzzz
-            set: function (version) {
-                this._newVersion = version;
-            },
-            enumerable: false,
-            configurable: true
-        });
-        // FUNCTION
-        Computer.prototype.computerInformation = function () {
-            var result = "Information => MainCard: ".concat(this._mainCard, " Cpu: ").concat(this._cpu, " Ram: ").concat(this._ram, " Harddisk: ").concat(this._harddisk, " NewVersion: ").concat(this._newVersion);
-            console.log(result);
-        };
-        return Computer;
-    }()); //end class Computer
-    // Encapsulation (Computer)
-    var computerInstance = new Computer("Computer", "i7", 8, "1TB", false);
-    console.log("MAIN CARD: " + computerInstance._mainCard);
-    console.log("CPU: " + computerInstance._cpu);
-    console.log("RAM: " + computerInstance._ram);
-    console.log("HARD DISK: " + computerInstance._harddisk);
-    // private böyle yazamazsınız sadece encapsulation olarak private kullanabilirsin.
-    // Encapsulation(SET)
-    computerInstance.encapsulationNewVersion = true;
-    // Encapsulation(GET)
-    console.log("Version: " + computerInstance.encapsulationNewVersion);
-    //console.log("Version: " + computerInstance._newVersion);
-    computerInstance.computerInformation();
-    console.log("**********************************************");
-};
-//tsEncapsulationClass()
 // #### ABSTRACT #################################################
 // TypeScript Abstract
 // super
+var abstractFunction = function () {
+    // abstract class( Genel Ortak Özellikler )
+    var bilgisayarOrtakOzellikler = /** @class */ (function () {
+        // FIELD
+        // CONSTRUCTOR
+        function bilgisayarOrtakOzellikler() {
+        }
+        // FUNCTION
+        // Gövdeli Function
+        bilgisayarOrtakOzellikler.prototype.anakart = function () {
+            console.log("Anakart");
+        };
+        return bilgisayarOrtakOzellikler;
+    }()); //end class abstract bilgisayarOrtakOzellikler
+    // MSI
+    var msiTitan = /** @class */ (function (_super) {
+        __extends(msiTitan, _super);
+        //FIELD
+        // CONSTRUCTOR
+        function msiTitan() {
+            return _super.call(this) || this; // abstract class almak
+        }
+        // Override
+        msiTitan.prototype.anakart = function () {
+            console.log("Anakart Msi");
+        };
+        // NOT: abstract yazdığımız gövdesiz metodu extends ettiğimiz classta yazmak zorundayız.
+        msiTitan.prototype.cpu = function () {
+            console.log("MSI CPU");
+        };
+        return msiTitan;
+    }(bilgisayarOrtakOzellikler)); //end class msiTitan
+    /////////////////////////
+    // abstract class instance yapamazsınız.
+    // let bilgisayarOrtakOzellik = new bilgisayarOrtakOzellikler();
+    var msiVersion1 = new msiTitan();
+    msiVersion1.anakart();
+    msiVersion1.cpu();
+};
+abstractFunction();
 // #### GENERICS #################################################
 // TypeScript Generics
+// #### ASSERTIONS (CAST #################################################
+function typeAssertionsFunction() {
+    console.log("type Assertions:  Tür değiştirme");
+    var data;
+    // bu yazımda otomatik any
+    data = "Merhabalar";
+    //any: string, number,boolean
+    // 1. YOL
+    var value1 = data.length;
+    console.log(value1);
+    // 2. YOL (Assertions)
+    var value2 = data.length;
+    console.log(value2);
+    // 3. YOL (Assertions)
+    var value3 = data.length;
+    console.log(value3);
+}
+//typeAssertionsFunction();
 // #### INTERFACE #################################################
 // TypeScript Interface
 // TypeScript Never
