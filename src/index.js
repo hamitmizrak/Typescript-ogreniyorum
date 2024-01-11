@@ -585,7 +585,7 @@ function typeAssertionsFunction() {
     var value3 = data.length;
     console.log(value3);
 }
-//typeAssertionsFunction();
+typeAssertionsFunction();
 // #### INTERFACE #################################################
 // TypeScript Interface
 // ###############################################################

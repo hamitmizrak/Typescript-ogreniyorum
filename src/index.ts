@@ -734,7 +734,7 @@ function typeAssertionsFunction() {
   let value3 = (data as string).length;
   console.log(value3);
 }
-//typeAssertionsFunction();
+typeAssertionsFunction();
 
 // #### INTERFACE #################################################
 // TypeScript Interface
