@@ -184,10 +184,12 @@ var tsObject = function () {
 // #### FUNCTIONS #################################################
 // TypeScript Fonksiyonlar
 // void: dönüşü olmayan (Yani işlem sonunda bana birşey döndermee)
-/*function tsFunction(x,y,z){
+/*
+function tsFunction(x,y,z){
     console.log(`Normal: ${x} ${y} ${z}`);
 }
-tsFunction(4,10,99);*/
+tsFunction(4,10,99);
+*/
 function tsFunction2(x, y, z) {
     console.log("TS Function2: ".concat(x, " ").concat(y, " ").concat(z));
 }
